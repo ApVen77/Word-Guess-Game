@@ -2,8 +2,8 @@
 
 
 body {
-    border: 5px solid black; 
-    background-color: burlywood; 
+    border: 5px solid #7777); 
+    background-color: rgb(36, 218, 231); 
 }
 
 .navbar {
@@ -11,13 +11,16 @@ background-color: none;
 
 }
 
+h1 { color: rgb(6, 77, 170); 
+
+}
 h2 {
-    background-color: orangered; 
-    border: 1px solid orange; 
+    background-color:rgb(99, 149, 214); 
+    border: 1px solid orangered; 
 }
 
 p {
 
-    color: orangered; 
+    color: rgb(6, 77, 170); 
     font-size: 25px;  
 }
