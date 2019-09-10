@@ -19,7 +19,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    <title>State Capitals</title>
+    <title>State Capitals Hangman</title>
 </head>
 
 <body>
@@ -50,7 +50,10 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-10.">
+
+
+
                 <h2>Do you Know your <strong>HARD</strong> US Capitals?</h2>
             </div>
         </div>
@@ -83,7 +86,6 @@
         var questionType = document.getElementById("questions");
         var wordGuess = document.getElementById("word-guess");
         var letterGuess = document.getElementById("letter-guess");
-        var arrayAnswer = document.getElementById("array-answer");
         var remainingGuess = document.getElementById("remaining-guess");
         var winsText = document.getElementById("wins");
         var lossesText = document.getElementById("losses");
@@ -98,16 +100,20 @@
 
 
         // the guess tabs _ _ _ _
-
-        // var states = []; 
-        //     for (var i = 0; i < arrayAnswer.length; i++) { //what are looping through?
-        //         arrayAnswer[i] = "_"}
+        
+           // var wordGuess= []; 
+        //  for (var i = 0; i < capitals.length; i++) { //what are looping through?
+        // arrayAnswer[i] = "_"}
 
         //remaining letters
+       // var letterGuess = event.key;   //look at vars 
+        //     for (var i = 0; i > capitals.length; i++) {
+        //         if (letterGuess === [i]) {
+        //             alert(arrayAnswer.join(" "));  //how to target the letter 
+      //  var remainingGuess = 0;  //look at the number 
 
-        var remainingGuess = 0;  //look at the number 
-
-
+  //  function display() {
+  // document.querySelector("").innerHTML = matches.split("").join(" ");
 
 
 
@@ -115,19 +121,59 @@
 
         // if user presses key, a new round will start
 
-       
+
         //     var wordGuess = states[Math.floor(Math.random() * questions)]
         //     prompt("What is the capital " + wordGuess + "?")
         document.onkeyup = function (event) {
-               
-                var question = prompt("What is the capital of Deleware?");
-                if (question === "dover") {
-                   alert("Good Start!");
-                   } else{alert("Good luck on the next one."); }
-                   
-                    
-                
-                
+
+            var question = prompt("What is the capital of Deleware?");
+            if (question === index[0]) {
+                alert("Good Start!");
+            } else { alert("Good luck on the next one."); }
+
+            var question = prompt("What is the capital of Maine?");
+            if (question === index[2]) {
+                alert("Someone knows their stuff!");
+            } else { alert("Uh-oh. That's not right!"); }
+
+            var question = prompt("What is the capital of Kansas?");
+            if (question === index[4]) {
+                alert("Super cool!");
+            } else { alert("Nope!"); 
+            }
+
+            var question = prompt("What is the capital of West Virgina?");
+            if (question === index[7]) {
+                alert("Yas, Child!");
+            } else { alert("I don't think that's right!"); }
+
+            var question = prompt("What is the capital of Alabama?");
+            if (question === index[1]) {
+                alert("Someone knows their stuff!");
+            } else { alert("Uh-oh. That's not right!"); }
+
+
+            var question = prompt("What is the capital of Oregan?");
+            if (question === index[3]) {
+                alert("Someone knows their stuff!");
+            } else { alert("Soomeone wasn't paying attention in 7th grade"); }
+
+
+            var question = prompt("What is the capital of Illinois?");
+            if (question === index[6]) {
+                alert("Someone knows their stuff!");
+            } else { alert("Uh-oh. That's not right!"); }
+        
+
+
+        var question = prompt("What is the capital of Minnessota?");
+        if (question === index[5]) {
+            alert("Someone knows their stuff!");
+        } else { alert("Uh-oh. That's not right!"); }
+
+        } 
+
+
         //     }
         //     var letterGuess = event.key;   //look at vars 
         //     for (var i = 0; i > capitals.length; i++) {
@@ -150,7 +196,7 @@
         //         }
         //     }
 
-        // }
+         
     </script>
 
 </body>

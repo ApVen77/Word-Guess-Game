@@ -1,22 +1,21 @@
-*
+*box-sizing:border-box
 
 
 body {
-    border: 5px solid #7777); 
+    margin: 20px auto; 
     background-color: rgb(36, 218, 231); 
 }
 
-.navbar {
-background-color: none; 
 
-}
+
 
 h1 { color: rgb(6, 77, 170); 
 
 }
 h2 {
     background-color:rgb(99, 149, 214); 
-    border: 1px solid orangered; 
+    width: 100%; 
+    border-bottom: 2px solid #CCC;  
 }
 
 p {
