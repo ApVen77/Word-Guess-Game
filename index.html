@@ -17,77 +17,142 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <title>State Capitals</title>
 </head>
 
 <body>
-    <!--start nav-->
-    <div class="navbar">
-        <!-- Image and text -->
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30"
-                    class="d-inline-block align-top" alt="">
-                Word Guess US Capitals Game
-            </a>
-        </nav>
+
+    <div>
+        <p id="questions"></p>
+        <p id="word-guess"></p>
+        <p id="array-answer"></p>
+        <p id="remaining-guess"></p>
+        <p id="letter-guess"></p>
+        <p id="wins"></p>
+        <p id="losses"></p>
     </div>
+
+    <!--start nav-->
+
+
+    <!-- Image and text -->
+    <!-- <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="bootstrap">
+          Bootstrap
+        </a>
+      </nav> -->
+
+
     <!--end of nav-->
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h1>Do you Know your <strong>HARD</strong> US Capitals?</h1>
+            <div class="col-md-6">
+                <h2>Do you Know your <strong>HARD</strong> US Capitals?</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <p>
                     <img src="https://www.waterproofpaper.com/printable-maps/county-map/printable-united-states-map.gif"
                         alt="USA Map">
                     Fewer than 60% of Americans know state capitals, and only 1 in 1000 know the capital of these 8
-                    states. <strong>You Try!</strong>
+                    states. <strong>You Try!</strong> <i>Touch any key to Begin!</i>
                 </p>
             </div>
         </div>
     </div>
-    <script>
+
+
+    <script type="text/javascript">
+
+        //local vars//
+
+
+
+        //start score//
+
+        var wins = 0;
+        var losses = 0;
 
         // list answers
 
-    var capitals=["Dover", "Montgomery", "Augusta", "Salem", "Topeka", "St. Paul", "Springfield", "Charleston"]; 
+        var questionType = document.getElementById("questions");
+        var wordGuess = document.getElementById("word-guess");
+        var letterGuess = document.getElementById("letter-guess");
+        var arrayAnswer = document.getElementById("array-answer");
+        var remainingGuess = document.getElementById("remaining-guess");
+        var winsText = document.getElementById("wins");
+        var lossesText = document.getElementById("losses");
 
+
+        var capitals = ["Dover", "Montgomery", "Augusta", "Salem", "Topeka", "St. Paul", "Springfield", "Charleston"];
+        var states = ["Deleware", "Alabama", "Maine", "Oregan", "Kansas", "Minessota", "Illinois", "West Virginia"];
+
+        console.log(wordGuess);
         // js will choose a random capital 
 
-    var wordGuess= [Math.word(Math.random() * capitals.length)] 
-    
+
+
         // the guess tabs _ _ _ _
 
-        var arrayAnswer= []; {
-            for (var i=0; i< capitals.length; i++ ) {
-                arrayAnswer[i]= "_", 
-            }
-        }
-    
-    
-    // game code
+        // var states = []; 
+        //     for (var i = 0; i < arrayAnswer.length; i++) { //what are looping through?
+        //         arrayAnswer[i] = "_"}
 
+        //remaining letters
+
+        var remainingGuess = 0;  //look at the number 
+
+
+
+
+
+        // --------- game code ----------- //
 
         // if user presses key, a new round will start
-    document.onkeyup = function(event) {
-    var userGuess = event.key; 
 
-    var guess = prompt ("What is the Capital of West Virgina?") 
-        if ( guess=== index [7]  { 
+       
+        //     var wordGuess = states[Math.floor(Math.random() * questions)]
+        //     prompt("What is the capital " + wordGuess + "?")
+        document.onkeyup = function (event) {
+               
+                var question = prompt("What is the capital of Deleware?");
+                if (question === "dover") {
+                   alert("Good Start!");
+                   } else{alert("Good luck on the next one."); }
+                   
+                    
+                
+                
+        //     }
+        //     var letterGuess = event.key;   //look at vars 
+        //     for (var i = 0; i > capitals.length; i++) {
+        //         if (letterGuess === [i]) {
+        //             alert(arrayAnswer.join(" "));  //how to target the letter 
+        //             //condition if the letter in the word
+        //         }
+        //     }
+        //     // letters left to be guessed   // loop through each letter 
+        //     while (remainingGuess > 0) {
 
-            alert ("You're a Smart Cookie")
+        //         // show the letters they've guessed
 
-        }
-            else {alert ("So Sorry") }
 
+
+        //         var wordGuess = prompt("What is the Capital of + [] Guess a letter"); {
+        //             if (wordGuess === i[7])    //var issues //answer loop 
+        //                 alert(arrayAnswer.join(" "));
+
+        //         }
+        //     }
+
+        // }
     </script>
+
 </body>
 
 </html>
